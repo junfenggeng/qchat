@@ -19,8 +19,15 @@ def cmd_time():
 @qchat.command("add")
 def cmd_add(a: int, b: int):
     "Add two numbers"
-    print(f"Adding {a} and {b}, result: {a + b}")
     return a + b
+
+@qchat.command("html")
+def cmd_html():
+    "Demo of HTML output"
+    return """<h1>HTML Demo</h1>
+    <p>This is a paragraph of text.</p>
+    <p>It can contain <strong>bold</strong> and <em>italic</em> text.</p>
+    """
 
 if __name__ == "__main__":
     qchat.run()
