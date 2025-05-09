@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>728</width>
+    <height>563</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>DejaVu Sans Mono</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>QChat</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Main window background */
+QMainWindow {
+    background-color: #282c34;
+}
+
+/* Scroll bars */
+QScrollBar:vertical {
+    border: none;
+    background: #282c34;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #4f5666;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Text edit (message input) */
+QTextEdit {
+    background-color: #282c34;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    padding: 5px;
+    selection-background-color: #3e4451;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+}
+
+/* Message display area */
+QTextBrowser {
+    background-color: #282c34;
+    color: #abb2bf;
+    border: none;
+    padding: 5px;
+    selection-background-color: #3e4451;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #3e4451;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    padding: 5px 10px;
+    min-width: 60px;
+}
+
+QPushButton:hover {
+    background-color: #4f5666;
+}
+
+QPushButton:pressed {
+    background-color: #3e4451;
+}
+
+/* Line edits (username, etc.) */
+QLineEdit {
+    background-color: #282c34;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    padding: 5px;
+    selection-background-color: #3e4451;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Labels */
+QLabel {
+    color: #abb2bf;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* List widgets (user list, etc.) */
+QListWidget {
+    background-color: #282c34;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    padding: 5px;
+    selection-background-color: #3e4451;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* Tab widgets */
+QTabWidget::pane {
+    border: 1px solid #3e4451;
+    background: #282c34;
+}
+
+QTabBar::tab {
+    background: #282c34;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
+    padding: 5px 10px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background: #3e4451;
+    border-bottom: 2px solid #61afef;
+}
+
+/* Tooltips */
+QToolTip {
+    background-color: #3e4451;
+    color: #abb2bf;
+    border: 1px solid #3e4451;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Message bubbles */
+.message-bubble {
+    background-color: #3e4451;
+    color: #abb2bf;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.message-bubble-sender {
+    background-color: #3e4451;
+    color: #61afef;
+    font-weight: bold;
+}
+
+.message-bubble-time {
+    color: #5c6370;
+    font-size: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit_msg">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="undoRedoEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_cmd"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_send">
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
